@@ -1,0 +1,272 @@
+@import "bourbon", "neat";
+
+
+$extra-large: new-breakpoint(max-width 1150px 12);
+$large: new-breakpoint(min-width 869px 12);
+$medium: new-breakpoint(max-width 868px 4);
+$small: new-breakpoint(max-width 600px 2);
+
+$wrapper-width: 1280px;
+
+$padding: 25px;
+
+$primary-color: #666;
+$secondary-color: #ddd;
+$tertiary-color: #ccc;
+
+$background-color: #aaa;
+
+$border-radius: 3px;
+$white-transparent: rgba(255, 255, 255, 0.5);
+
+$logo-height: 45px;
+$logo-height-small: 35px;
+
+*, html {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+
+	font-family: sans-serif;
+}
+
+body {
+	color: $primary-color;
+	background: $background-color;
+}
+
+h1 {
+	font-size: 2em;
+	padding-right: 5%;
+}
+
+h2 {
+	font-size: 1.1em;
+	font-weight: 200;
+	margin-bottom: $padding;
+}
+
+h1, h2, h3, h4 {
+	@include media($small) {
+		text-align: center;
+	}
+}
+
+p {
+	font-size: 0.8em;
+}
+
+.wrapper {
+	@include outer-container;
+	width: 86%;
+	max-width: $wrapper-width;
+	// set min-width (background behaves strangely when browser is resized below min width - shouldn't be problematic)
+	min-width: 300px;
+	margin: 0 auto;
+
+	@include media($medium) {
+		//max-width: 480px;
+	}
+
+	@include media($small) {
+		width: 90%;
+	}
+}
+
+header {
+	background: $primary-color;
+	height: 250px;
+	color: white;
+
+	@include media($medium) {
+		height: 200px;
+	}
+
+	nav {
+		padding-top: 25px;
+	}
+
+	#logos {
+		@include span-columns(8);
+
+		img { 
+			height: $logo-height;
+			@include media($small) {
+				height: $logo-height-small;
+			}
+		}
+
+		#plus {
+			margin: 0 15px;
+			font-size: $logo-height;
+			line-height: $logo-height;
+			vertical-align: top;
+			@include media($small) {
+				font-size: $logo-height-small;
+				line-height: $logo-height-small;
+			}
+		}
+
+		@include media($medium) {
+			@include span-columns(4);
+			text-align: center;
+		}
+
+	}
+
+	#login {
+		@include span-columns(4);
+		text-align: right;
+		@include media($medium) {
+			display: none;
+		}
+	}
+
+	#login a {
+		display: block;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 15px;
+
+		display: inline-block;
+		
+		text-decoration: none;
+		border-radius: $border-radius;
+		
+	}
+
+	#demo {
+		background: $secondary-color;
+		color: $primary-color;
+		border: 1px solid $secondary-color;
+	}
+
+	#signin {
+		background: none;
+		border: 1px solid $secondary-color;
+		color: $secondary-color;
+	}
+}
+
+main {
+
+	section#box-container {
+		position: relative;
+		top: -100px;
+
+
+		ul {
+			padding: 0;
+			background: $secondary-color;
+			@include outer-container;
+			// overwrite max-width from outer-container
+			max-width: none;
+		}
+
+		ul li {
+			@include span-columns(4);
+
+			@include media($large) {
+				@include omega(3n);
+				&:nth-child(2n) { background: #eee; }
+			}
+
+			// Get rid of gutter
+			padding: $padding * 1.5;
+			margin: 0;
+			width: (1/3)*100%;
+			
+			height: 270px;
+
+			@include media($medium) {
+				@include span-columns(2);
+				@include omega();
+				margin: 0;
+				width: (1/2)*100%;
+
+
+				&:nth-child(3) { background: $tertiary-color; }
+				&:nth-child(4) { background: $tertiary-color; }
+				&:nth-child(5) { background: $secondary-color; }
+				&:nth-child(8) { background: $secondary-color; }
+				&:nth-child(9) { background: $tertiary-color; }
+
+				&.blank { display: none; }
+			}
+
+			@include media($small) {
+				height: 200px;
+				@include span-columns(2);
+
+				&:nth-child(3) { background: $tertiary-color; }
+				&:nth-child(4) { background: $secondary-color; }
+				&:nth-child(5) { background: $tertiary-color; }
+				&:nth-child(8) { background: $secondary-color; }
+				&:nth-child(9) { background: $tertiary-color; }
+				
+			}
+			
+		}
+
+		//ul li:nth-child(2) {
+		ul li.blank {
+			background: url('http://www.demandforce.com/_assets/images/hero/raylon-hero.png') no-repeat center;
+			background-size: cover;
+		}
+
+		ul li.box {
+			text-align: center;
+			
+
+			svg {
+				margin: 30px 0 15px 0;
+				@include media($small) {
+					margin: 0px 0 15px 0;
+				}
+			}
+
+			h2 {
+				font-size: 1.3em;
+			}
+		}
+
+	}
+
+}
+
+footer {
+	background: blue;
+	color: white;
+	text-align: center;
+	display: none;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+
+	.wrapper { width: 100%; }
+
+	height: 50px;
+	line-height: 50px;
+
+	@include media($medium) {
+		// make visible
+		display: block;
+	}
+
+	.footer-btn a {
+		@include span-columns(6);
+		margin: 0;
+		width: 50%;
+		color: white;
+		text-decoration: none;
+	}
+
+	#footer-demo a {
+	}
+
+	#footer-signup a {
+		background: #00c;
+	}
+}
+
+

@@ -1,0 +1,234 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+*, html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif; }
+
+body {
+  color: #666;
+  background: #aaa; }
+
+h1 {
+  font-size: 2em;
+  padding-right: 5%; }
+
+h2 {
+  font-size: 1.1em;
+  font-weight: 200;
+  margin-bottom: 25px; }
+
+@media screen and (max-width: 600px) {
+  h1, h2, h3, h4 {
+    text-align: center; } }
+
+p {
+  font-size: 0.8em; }
+
+.wrapper {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 86%;
+  max-width: 1280px;
+  min-width: 300px;
+  margin: 0 auto; }
+  .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (max-width: 600px) {
+    .wrapper {
+      width: 90%; } }
+
+header {
+  background: #666;
+  height: 250px;
+  color: white; }
+  @media screen and (max-width: 868px) {
+    header {
+      height: 200px; } }
+  header nav {
+    padding-top: 25px; }
+  header #logos {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 65.8807828007%; }
+    header #logos:last-child {
+      margin-right: 0; }
+    header #logos img {
+      height: 45px; }
+      @media screen and (max-width: 600px) {
+        header #logos img {
+          height: 35px; } }
+    header #logos #plus {
+      margin: 0 15px;
+      font-size: 45px;
+      line-height: 45px;
+      vertical-align: top; }
+      @media screen and (max-width: 600px) {
+        header #logos #plus {
+          font-size: 35px;
+          line-height: 35px; } }
+    @media screen and (max-width: 868px) {
+      header #logos {
+        float: left;
+        display: block;
+        margin-right: 7.4229703521%;
+        width: 100%;
+        text-align: center; }
+        header #logos:last-child {
+          margin-right: 0; } }
+  header #login {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    text-align: right; }
+    header #login:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 868px) {
+      header #login {
+        display: none; } }
+  header #login a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 3px; }
+  header #demo {
+    background: #ddd;
+    color: #666;
+    border: 1px solid #ddd; }
+  header #signin {
+    background: none;
+    border: 1px solid #ddd;
+    color: #ddd; }
+
+main section#box-container {
+  position: relative;
+  top: -100px; }
+  main section#box-container ul {
+    padding: 0;
+    background: #ddd;
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none; }
+    main section#box-container ul::after {
+      clear: both;
+      content: "";
+      display: table; }
+  main section#box-container ul li {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 31.7615656014%;
+    padding: 37.5px;
+    margin: 0;
+    width: 33.3333333333%;
+    height: 270px; }
+    main section#box-container ul li:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 869px) {
+      main section#box-container ul li:nth-child(3n) {
+        margin-right: 0; }
+      main section#box-container ul li:nth-child(3n+1) {
+        clear: left; }
+      main section#box-container ul li:nth-child(2n) {
+        background: #eee; } }
+    @media screen and (max-width: 868px) {
+      main section#box-container ul li {
+        float: left;
+        display: block;
+        margin-right: 7.4229703521%;
+        width: 46.288514824%;
+        margin-right: 0;
+        margin: 0;
+        width: 50%; }
+        main section#box-container ul li:last-child {
+          margin-right: 0; }
+        main section#box-container ul li:nth-child(3) {
+          background: #ccc; }
+        main section#box-container ul li:nth-child(4) {
+          background: #ccc; }
+        main section#box-container ul li:nth-child(5) {
+          background: #ddd; }
+        main section#box-container ul li:nth-child(8) {
+          background: #ddd; }
+        main section#box-container ul li:nth-child(9) {
+          background: #ccc; }
+        main section#box-container ul li.blank {
+          display: none; } }
+    @media screen and (max-width: 600px) {
+      main section#box-container ul li {
+        height: 200px;
+        float: left;
+        display: block;
+        margin-right: 16.0363113405%;
+        width: 100%; }
+        main section#box-container ul li:last-child {
+          margin-right: 0; }
+        main section#box-container ul li:nth-child(3) {
+          background: #ccc; }
+        main section#box-container ul li:nth-child(4) {
+          background: #ddd; }
+        main section#box-container ul li:nth-child(5) {
+          background: #ccc; }
+        main section#box-container ul li:nth-child(8) {
+          background: #ddd; }
+        main section#box-container ul li:nth-child(9) {
+          background: #ccc; } }
+  main section#box-container ul li.blank {
+    background: url("http://www.demandforce.com/_assets/images/hero/raylon-hero.png") no-repeat center;
+    background-size: cover; }
+  main section#box-container ul li.box {
+    text-align: center; }
+    main section#box-container ul li.box svg {
+      margin: 30px 0 15px 0; }
+      @media screen and (max-width: 600px) {
+        main section#box-container ul li.box svg {
+          margin: 0px 0 15px 0; } }
+    main section#box-container ul li.box h2 {
+      font-size: 1.3em; }
+
+footer {
+  background: blue;
+  color: white;
+  text-align: center;
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  line-height: 50px; }
+  footer .wrapper {
+    width: 100%; }
+  @media screen and (max-width: 868px) {
+    footer {
+      display: block; } }
+  footer .footer-btn a {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    margin: 0;
+    width: 50%;
+    color: white;
+    text-decoration: none; }
+    footer .footer-btn a:last-child {
+      margin-right: 0; }
+  footer #footer-signup a {
+    background: #00c; }
